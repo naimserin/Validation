@@ -1,0 +1,126 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>JQuery Validation Html Element</title>
+    
+    <link href="Src/css/bootstrap.min.css" rel="stylesheet" />
+    <script src="Src/js/jquery-1.11.3.min.js"></script>
+    <script src="Src/js/bootstrap.min.js"></script>
+    <script src="Src/js/validation.js"></script>
+
+    <style>
+        .control-label {
+            position: absolute;
+            right: 5px;
+            top: -22px;
+            color: #fff;
+            width: auto;
+            font-size: 12px;
+            box-shadow: 0 0 6px #000;
+            -moz-box-shadow: 0 0 6px #000;
+            -webkit-box-shadow: 0 0 6px #000;
+            padding: 4px 10px 4px 10px;
+            border-radius: 6px;
+            -moz-border-radius: 6px;
+            -webkit-border-radius: 6px;
+            display: none;
+            font-family: Tahoma, Geneva, sans-serif;
+            background-color: #00AEEF;
+        }
+
+            .control-label:after {
+                width: 0;
+                height: 0;
+                border-left: 7px solid transparent;
+                border-right: 7px solid transparent;
+                border-top: 7px solid #00AEEF;
+                content: "";
+                position: absolute;
+                left: 5px;
+                bottom: -6px;
+            }
+    </style>
+
+</head>
+<body>
+    <nav class="navbar navbar-default" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">Validation</a>
+            </div>
+            <div id="navbar" class="collapse navbar-collapse">
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="/">Home</a></li>
+                    <li><a href="https://github.com/naimserin/Validation" target="_blank">Download</a></li>
+                </ul>
+            </div>
+            <!--/.nav-collapse -->
+        </div>
+    </nav>
+    <div class="container">
+        <div id="validationForm">
+            <div class="form-group">
+                <label for="">Text</label>
+                <div style="position: relative;">
+                    <input type="text" class="form-control" data-status="0" data-min-text-value="1" data-error-message="*" placeholder="Text" />
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="">E-Mail</label>
+                <div style="position: relative;">
+                    <input type="text" class="form-control" data-type="email" data-status="0" data-error-message="*" placeholder="E-Mail" />
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="">Number</label>
+                <div style="position: relative;">
+                    <input type="text" class="form-control" data-type="number" data-status="0" data-min-text-value="5" data-error-message="*" placeholder="Number" />
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="">Text</label>
+                <div style="position: relative;">
+                    <textarea class="form-control" data-status="0" data-min-text-value="1" data-error-message="*" placeholder="Text"></textarea>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="">Date</label>
+                <div style="position: relative;">
+                    <input type="text" class="form-control" data-type="date" data-status="0" data-error-message="*" placeholder="Date" />
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="">Time</label>
+                <div style="position: relative;">
+                    <input type="text" class="form-control" data-type="time" data-status="0" data-error-message="*" placeholder="Time" />
+                </div>
+            </div>
+        </div>
+        <div class="well">
+            CSS<br />
+            &lt;link href=&quot;~/Src/css/bootstrap.min.css&quot; rel=&quot;stylesheet&quot; /&gt;<br />
+            <br />
+            JS<br />
+            &lt;script src=&quot;~/Src/js/jquery-1.11.3.min.js&quot;&gt;&lt;/script&gt;<br />
+            &lt;script src=&quot;~/Src/js/bootstrap.min.js&quot;&gt;&lt;/script&gt;<br />
+            &lt;script src=&quot;~/Src/js/validation.js&quot;&gt;&lt;/script&gt;<br />
+
+            <h4>Start Function</h4>
+            <pre>&lt;script&gt;formcontrol("#validationForm");&lt;/script&gt;</pre>
+        </div>
+        
+    </div>
+    <script>
+        formcontrol("#validationForm");
+        $('[title]').tooltip();
+    </script>
+</body>
+</html>
