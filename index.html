@@ -103,6 +103,11 @@
                     <input type="text" class="form-control" data-type="time" data-status="0" data-error-message="*" placeholder="Time" />
                 </div>
             </div>
+            <div class="form-group">
+                <div style="position: relative;">
+                    <input type="button" class="btn btn-primary" id="btnGonder" value="Save" />
+                </div>
+            </div>
         </div>
         <div class="well">
             CSS<br />
@@ -114,12 +119,37 @@
             &lt;script src=&quot;~/Src/js/validation.js&quot;&gt;&lt;/script&gt;<br />
 
             <h4>Start Function</h4>
-            <pre>&lt;script&gt;formcontrol("#validationForm");&lt;/script&gt;</pre>
+            <pre>&lt;script&gt;
+           $("#validationForm").validation({
+                button: "#btnGonder",
+                onSubmit: function () {
+                    $("#btnGonder").attr({ 'disabled': true });
+                },
+                onCompleted: function () {
+                    alert("onCompleted");
+                    $("#btnGonder").attr({ 'disabled': true });
+                },
+                onError: function () {
+                    $("#btnGonder").attr({ 'disabled': false });
+                }
+           });<br />&lt;/script&gt;</pre>
         </div>
         
     </div>
     <script>
-        formcontrol("#validationForm");
+        $("#validationForm").validation({
+            button: "#btnGonder",
+            onSubmit: function () {
+                $("#btnGonder").attr({ 'disabled': true });
+            },
+            onCompleted: function () {
+                alert("onCompleted");
+                $("#btnGonder").attr({ 'disabled': true });
+            },
+            onError: function () {
+                $("#btnGonder").attr({ 'disabled': false });
+            }
+        });
         $('[title]').tooltip();
     </script>
 </body>
