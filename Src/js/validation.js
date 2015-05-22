@@ -13,7 +13,7 @@
                 return true;
             }
         }, options);
-        $("" + settings.button + "").click(function () {
+        $("" + content + " " + settings.button + "").click(function () {
             settings.onSubmit.call();
             if ($("" + content + " [data-status='0']").val() != undefined) {
                 $.each($("" + content + " [data-status]"), function () {
