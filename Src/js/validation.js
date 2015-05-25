@@ -1,4 +1,4 @@
-(function ($) {
+﻿(function ($) {
     $.fn.validation = function (options) {
         var content = String(this.selector);
         var settings = $.extend({
@@ -30,8 +30,8 @@
             var totalError = 0;
             $.each(items, function (i, val) {
 
-                if (val.item.attr('data-status') == undefined || val.item.attr('data-status') != 0 || val.item.attr('data-status') != 1) val.item.attr({ 'data-status': '0' });                
-                if (val.item.attr('data-type') == undefined || val.item.attr('data-type') != val.datatype)                    val.item.attr({ 'data-type': val.datatype }); 
+                if (val.item.attr('data-status') == undefined || val.item.attr('data-status') != 0 || val.item.attr('data-status') != 1) val.item.attr({ 'data-status': '0' });
+                if (val.item.attr('data-type') == undefined || val.item.attr('data-type') != val.datatype) val.item.attr({ 'data-type': val.datatype });
                 if (val.item.attr('data-min-text-value') == undefined || val.item.attr('data-min-text-value') != val.datamintextvalue) val.item.attr({ 'data-min-text-value': val.datamintextvalue });
                 if (val.item.attr('data-error-message') == undefined || val.item.attr('data-error-message') != val.dataerrormessage) val.item.attr({ 'data-error-message': val.dataerrormessage });
 
@@ -117,8 +117,7 @@
             return true;
         });
         var email = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
-        $.datatypeemail = function (item) {
-            console.log(email.test($(item).val()));
+        $.datatypeemail = function (item) {            
             var status = false;
             if (email.test($(item).val()) == false) {
                 status = false;
