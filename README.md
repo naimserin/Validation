@@ -25,3 +25,5 @@ HTML Form Element Validation
                 }
            });<br />&lt;/script&gt;</pre>
         </div>
+<br>
+<a href="http://validation.nseri.com/">CLICK TO DEMO</a>
