@@ -1,4 +1,5 @@
-﻿(function ($) {
+﻿//https://github.com/naimserin/Validation
+(function ($) {
     $.fn.validation = function (options) {
         var content = String(this.selector);
         var settings = $.extend({
